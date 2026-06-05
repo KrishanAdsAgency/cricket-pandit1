@@ -1,215 +1,246 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1543429347028774');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1543429347028774&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAIF EMIR YAARWIN</title>
 
-  <title>CRICKET PANDIT</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;}
+html,body{
+    height:100%;
+    width:100%;
+    overflow:hidden;
+    font-family:Arial,sans-serif;
+    text-align:center;
+    color:#fff;
+    background:linear-gradient(
+        45deg,
+        #120458,
+        #3b0764,
+        #6d28d9,
+        #9333ea
+    );
+    background-size:400% 400%;
+    animation:bgshift 10s ease infinite;
+}
 
-    body{
-      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-      background:
-        radial-gradient(circle at 20% 80%,rgba(255,180,0,0.25),transparent 55%),
-        radial-gradient(circle at 80% 20%,rgba(255,60,60,0.25),transparent 55%),
-        linear-gradient(135deg,#1a0505 0%,#3d0b0b 50%,#1a0505 100%);
-      min-height:100vh;
-      color:#fff;
-      overflow-x:hidden;
+@keyframes bgshift{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.top-bar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(0,0,0,0.85);
+    color:#e9d5ff;
+    font-size:14px;
+    padding:8px 0;
+    overflow:hidden;
+    white-space:nowrap;
+    z-index:999;
+    border-bottom:1px solid rgba(233,213,255,0.4);
+}
+
+.top-bar span{
+    display:inline-block;
+    padding-left:100%;
+    animation:ticker 18s linear infinite;
+}
+
+@keyframes ticker{
+    0%{transform:translateX(0%);}
+    100%{transform:translateX(-100%);}
+}
+
+.container{
+    min-height:100dvh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:0 20px;
+}
+
+.cta-box{
+    width:90%;
+    max-width:500px;
+    padding:50px 30px;
+    border-radius:25px;
+    backdrop-filter:blur(12px);
+    background:rgba(0,0,0,0.45);
+    border:2px solid rgba(233,213,255,0.5);
+    box-shadow:
+        0 0 40px rgba(192,132,252,0.3),
+        inset 0 0 30px rgba(126,34,206,0.2);
+}
+
+.logo{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    border:3px solid #e9d5ff;
+    box-shadow:0 0 30px rgba(233,213,255,0.8);
+    margin-bottom:25px;
+    animation:float 3s ease-in-out infinite;
+    object-fit:cover;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+
+.headline{
+    font-size:28px;
+    font-weight:bold;
+    color:#e9d5ff;
+    margin-bottom:15px;
+    text-shadow:0 0 15px rgba(233,213,255,0.9);
+}
+
+.subline{
+    font-size:17px;
+    line-height:1.6;
+    margin-bottom:25px;
+    color:#f5f5f5;
+}
+
+.proof{
+    color:#e9d5ff;
+    font-size:15px;
+    margin-bottom:20px;
+}
+
+.join-btn{
+    display:block;
+    width:100%;
+    padding:18px 0;
+    border-radius:12px;
+    font-size:20px;
+    font-weight:bold;
+    text-decoration:none;
+    color:#fff;
+    background:#7e22ce;
+    animation:blink 1s infinite;
+    box-shadow:0 0 25px rgba(126,34,206,0.8);
+}
+
+@keyframes blink{
+    0%,100%{
+        background:#7e22ce;
+        color:#fff;
+    }
+    50%{
+        background:#c084fc;
+        color:#111;
+    }
+}
+
+.countdown{
+    margin-top:20px;
+    font-size:16px;
+    font-weight:bold;
+    color:#e9d5ff;
+}
+
+.footer{
+    margin-top:30px;
+    font-size:13px;
+    color:#ddd;
+    line-height:1.6;
+}
+
+@media(max-width:480px){
+    .headline{
+        font-size:22px;
     }
 
-    .container{
-      max-width:100%;
-      padding:20px;
-      text-align:center;
+    .subline{
+        font-size:15px;
     }
 
-    .logo{
-      width:100px;
-      height:100px;
-      margin:0 auto 15px;
-      border-radius:50%;
-      overflow:hidden;
-      box-shadow:0 0 30px rgba(255,180,0,0.8);
+    .join-btn{
+        font-size:18px;
     }
-    .logo img{width:100%;height:100%;object-fit:cover;}
-
-    .title{
-      margin:20px;
-      font-size:clamp(26px,6vw,40px);
-      font-weight:900;
-      background:linear-gradient(45deg,#ffcc00,#ff4d4d,#ffcc00);
-      background-size:300% 300%;
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-      animation:titleGlow 4s ease infinite;
-    }
-
-    @keyframes titleGlow{
-      0%,100%{background-position:0% 50%;}
-      50%{background-position:100% 50%;}
-    }
-
-    .tagline{
-      font-size:14px;
-      color:rgba(255,255,255,0.9);
-      margin-bottom:30px;
-    }
-
-    .cta-button{
-      display:block;
-      width:300px;
-      max-width:90%;
-      margin:20px auto;
-      padding:16px 24px;
-      background:linear-gradient(135deg,#ffcc00,#ff4d4d);
-      border:none;
-      border-radius:30px;
-      color:#000;
-      text-decoration:none;
-      font-size:16px;
-      font-weight:bold;
-      box-shadow:0 0 30px rgba(255,100,50,0.9);
-      transition:0.3s;
-    }
-
-    .cta-button:hover{
-      transform:scale(1.06);
-      box-shadow:0 0 40px rgba(255,200,0,1);
-    }
-
-    .timer-section{
-      background:rgba(0,0,0,0.45);
-      border:1px solid rgba(255,180,0,0.6);
-      border-radius:20px;
-      padding:20px;
-      margin:30px auto;
-      max-width:400px;
-    }
-
-    .timer-title{
-      font-size:16px;
-      font-weight:bold;
-      margin-bottom:15px;
-      color:#ffcc00;
-    }
-
-    .timer-number{
-      font-size:30px;
-      font-weight:bold;
-      color:#ff4d4d;
-    }
-
-    .features-grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:12px;
-      margin:30px auto;
-      max-width:500px;
-    }
-
-    .feature-card{
-      background:rgba(255,255,255,0.08);
-      border-radius:15px;
-      padding:18px 10px;
-      transition:0.3s;
-    }
-
-    .feature-card:hover{
-      background:rgba(255,255,255,0.18);
-    }
-
-    .feature-icon{font-size:24px;margin-bottom:6px;}
-    .feature-title{font-size:12px;font-weight:bold;}
-    .feature-desc{font-size:10px;color:rgba(255,255,255,0.8);}
-  </style>
+}
+</style>
 </head>
 
 <body>
-  <div class="container">
 
-    <div class="logo">
-      <img src="logo.png" alt="Cricket Pandit Logo">
+<div class="top-bar">
+    <span>🔥 KAIF EMIR YAARWIN | 🚀 JOIN FAST | 🎯 PREMIUM ACCESS</span>
+</div>
+
+<div class="container">
+
+    <div class="cta-box">
+
+        <img src="logo.png" alt="Arun Bhaiya YAARWIN Logo" class="logo">
+
+        <div class="headline">
+            𝙰𝚛𝚞𝚗 𝙱𝚑𝚊𝚒𝚢𝚊 𝚈𝙰𝙰𝚁𝚆𝙸𝙽
+        </div>
+
+        <div class="subline">
+            Exclusive premium updates and fast support 🚀<br>
+            Trusted community • Instant access • Daily updates
+        </div>
+
+        <div class="proof">
+            👥 1,00,000+ Active Members
+        </div>
+
+        <a href="https://t.me/+WHs8wd2K05gzYzI1"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="join-btn">
+           📲 JOIN NOW FREE
+        </a>
+
+        <div class="countdown">
+            Auto joining in <span id="timer">10</span>s...
+        </div>
+
     </div>
 
-    <h1 class="title">CRICKET PANDIT</h1>
-
-    <p class="tagline">
-      Expert Cricket Signals & Match Insights<br>
-      Trusted • Fast • Accurate
-    </p>
-
-    <a href="https://t.me/+WEYPp53aap83NWRl" class="cta-button">
-      Join Telegram Now
-    </a>
-
-    <div class="timer-section">
-      <h3 class="timer-title">⏳ Session Ending Soon</h3>
-      <div class="timer-number" id="seconds">15</div>
-      <p style="font-size:11px;">Auto redirect to Telegram</p>
+    <div class="footer">
+        © 2026 KAIF EMIR YAARWIN<br>
+        All Rights Reserved.
     </div>
 
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🏏</div>
-        <div class="feature-title">Match Signals</div>
-        <div class="feature-desc">Expert analysis</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📊</div>
-        <div class="feature-title">Live Stats</div>
-        <div class="feature-desc">Accurate data</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">⚡</div>
-        <div class="feature-title">Fast Alerts</div>
-        <div class="feature-desc">Instant updates</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🔥</div>
-        <div class="feature-title">Winning Zone</div>
-        <div class="feature-desc">Pro level</div>
-      </div>
-    </div>
+</div>
 
-    <a href="https://t.me/+WEYPp53aap83NWRl" class="cta-button">
-      Join Telegram Now
-    </a>
+<script>
+let timeLeft = 10;
 
-  </div>
+const timerEl = document.getElementById("timer");
+const redirectUrl = "https://t.me/+WHs8wd2K05gzYzI1";
 
-  <script>
-    let redirectUrl="https://t.me/+WEYPp53aap83NWRl";
-    function updateTimer(){
-      const el=document.getElementById('seconds');
-      let s=parseInt(el.textContent);
-      s--;
-      if(s<0){
-        window.location.href=redirectUrl;
-        return;
-      }
-      el.textContent=s;
+const countdown = setInterval(() => {
+
+    if (timeLeft <= 1) {
+        clearInterval(countdown);
+        window.location.href = redirectUrl;
+    } else {
+        timeLeft--;
+        timerEl.textContent = timeLeft;
     }
-    setInterval(updateTimer,1000);
-  </script>
+
+}, 1000);
+</script>
+
 </body>
 </html>
- 
+```
